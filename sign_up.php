@@ -20,11 +20,11 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#" style="color: azure;">Vaccination Drive</a>
+        <a class="navbar-brand" href="index.php" style="color: azure;">Vaccination Drive</a>
         <div class="collapse navbar-collapse" id="myNavbar">    
                    <ul class="nav navbar-nav navbar-right"> 
                        
-                       <li><a href="index.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>        
+                       <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>        
                        </ul>     
                </div> 
       </div>
