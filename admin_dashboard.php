@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Home</title>
+        <title>Dashboard</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -19,7 +19,7 @@
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#" style="color: azure;">Vaccination Drive</a>
+              <a class="navbar-brand" href="index.php" style="color: azure;">Vaccination Drive</a>
           </div>
 
         </div>
@@ -32,12 +32,14 @@
         <br>
         <br>
         <form class="container">
-          <center><h2>Welcome</h2></center>
+          <center><h2>Dashboard</h2></center>
           <br>
       
-          <a class="btn btn-primary" href="user_choice.php" role="button">User</a>
+          <a class="btn btn-primary" href="#" role="button">Patient Records</a>
           <br><br>
-          <a class="btn btn-primary" href="login_ad.php" role="button">Admin</a>
+          <a class="btn btn-primary" href="#" role="button">Hospitals</a>
+          <br><br>
+          <a class="btn btn-primary" href="#" role="button">Vaccines</a>
         </form>
       </div>
     </body>
