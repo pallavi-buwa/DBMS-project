@@ -19,6 +19,19 @@ body, html {
     background-size: cover;
     position: relative;
   }
+  .bg-img-user {
+    /* The image used */
+    background-image: url("./User/vaccine.jpg");
+  
+    /* Control the height of the image */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
   
   /* Add styles to the form container */
   .container {
@@ -64,3 +77,12 @@ body, html {
   .btn:hover {
     opacity: 1;
   }
+
+  #vaccine{
+    float: left;    
+     margin: 0 0 0 15px;
+    }
+
+.info{
+  margin: left 100px;;
+}
