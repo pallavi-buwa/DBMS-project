@@ -133,3 +133,8 @@ i{
 .form-control{
   background-color: aliceblue;
 }
+@media print {
+  .noPrint{
+    display:none;
+  }
+}

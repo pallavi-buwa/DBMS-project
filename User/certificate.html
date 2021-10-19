@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Print Certificate</title>
+    <head class="noPrint">
+        <title class="noPrint"></title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -11,24 +11,7 @@
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js">
-            var doc = new jsPDF();
-            var specialElementHandlers = {
-                '#editor': function (element, renderer) {
-                    return true;
-                }
-            };
-        
-            $('#cmd').click(function () {
-                doc.fromHTML($('#content').html(), 15, 15, {
-                    'width': 170,
-                        'elementHandlers': specialElementHandlers
-                });
-                doc.save('sample-file.pdf');
-            });
-        
-            // This code is collected but useful, click below to jsfiddle link.
-        </script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -41,6 +24,7 @@
     <br>
 
     <body>
+        <div class="noPrint">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -55,7 +39,8 @@
               </ul>
             </div>
           </nav>
-        <div id ="content" style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
+        </div>
+        <div class="print" style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
             <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
                    <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
                    <br><br>
@@ -71,8 +56,9 @@
         
             <br>
             <br>
-            <div id=”editor”></div>
-            <button id=”cmd”>Generate PDF</button>
+            <div class="noPrint">
+            <button onclick="window.print()" >Generate PDF</button>
+            </div>
             <br>
             <br>
             
