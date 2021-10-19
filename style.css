@@ -43,12 +43,25 @@ body, html {
     border:1px solid #000;
     background-color: white;
   }
-
+  .contain-form {
+    width: 700px; 
+    padding-top: 40px;
+    padding-bottom: 50px;
+    margin-right:auto; 
+    margin-left:auto;
+    border:1px solid #000;
+    background-color: white;
+  }
   form {
     opacity: 0.85;
   }
   
-  
+  .edit{
+    color:#131212;
+    background-color: aquamarine;
+    border-color: aquamarine;
+    
+  }
   /* Full-width input fields */
     input[type=text], input[type=password], input[type=number] {
     width: 100%;
@@ -85,4 +98,38 @@ body, html {
 
 .info{
   margin: left 100px;;
+}
+.size {
+  font-size: 20px;
+}
+table{
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+}
+i{
+  padding-left: 10px;
+}
+.dropdown{
+  padding-left: 15px;
+  color: rgb(58, 57, 57);
+}
+#dropdown{
+  color: rgb(19, 18, 18);
+  background-color: rgb(255, 255, 255);
+  font-size: large;
+  font-weight: bold;
+
+}
+.dropdown-menu{
+  font-size: medium;
+  font-weight: bold;
+}
+.form-control{
+  background-color: aliceblue;
 }
