@@ -32,7 +32,7 @@
         <br>
         <br>
         <br>
-        <form action="admin_dashboard.php" method="POST" class="container">
+        <form action="login_ad_script.php" method="POST" class="container">
           <center><h2>Log In</h2></center>
       
           <label for="email"><b>Email</b></label>
@@ -42,8 +42,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
           
-            <a class="btn btn-primary" href="admin_dashboard.php" role="button">Check</a>
-          <!--<button type="button" class="btn btn-primary">Submit</button>-->
+          <button type="button" class="btn btn-primary">Submit</button>
         </form>
       </div>
           

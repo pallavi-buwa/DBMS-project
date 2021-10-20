@@ -8,7 +8,7 @@ body, html {
   
   .bg-img {
     /* The image used */
-    background-image: url("img1.png");
+    background-image: url("./User/back.jpg");
   
     /* Control the height of the image */
     height: 100%;

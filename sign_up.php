@@ -36,7 +36,7 @@
     <br>
     <br>
     
-    <form action="action_register_page.php" class="container" method = "POST">
+    <form action="sign_up_script.php.php" class="container" method = "POST">
       <center>
         <h2>Sign Up</h2>
       </center>
@@ -61,7 +61,7 @@
       <input type="number" placeholder="Enter Age" name="age" required>
       
       <label for="gender"><b>Gender</b></label>
-      <input type="text" placeholder="Enter Gender" name="gender" required>
+      <input type="text" placeholder="Enter Gender(M/F)" name="gender" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>

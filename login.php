@@ -36,7 +36,7 @@
         <br>
         <br>
         <br>
-        <form action="action_page.php" method="POST" class="container">
+        <form action="login_script.php" method="POST" class="container">
           <center><h2>Log In</h2></center>
       
           <label for="email"><b>Email</b></label>
