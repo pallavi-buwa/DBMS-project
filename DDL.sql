@@ -76,3 +76,5 @@ create table Vaccination_status2 (
 alter table Patient add column vacc_id int(10);
 alter table Patient add foreign key(vacc_id) references Vaccination_status1(vacc_id) on delete set null;
 
+alter table Login MODIFY pt_id int(10) auto_increment;
+
