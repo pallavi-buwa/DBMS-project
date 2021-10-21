@@ -41,11 +41,9 @@ require 'includes/common.php';
           <center><h2>Dashboard</h2></center>
           <br>
       
-          <a class="btn btn-primary" href="pt_records.php" role="button">Patient Records</a>
+          <a class="btn btn-primary" href="view_all.php" role="button">View all patient records</a>
           <br><br>
-          <a class="btn btn-primary" href="hospitals.php" role="button">Hospitals</a>
-          <br><br>
-          <a class="btn btn-primary" href="Vaccines.php" role="button">Vaccines</a>
+          <a class="btn btn-primary" href="search_pt.php" role="button">Search for a patient record</a>
         </form>
       </div>
     </body>

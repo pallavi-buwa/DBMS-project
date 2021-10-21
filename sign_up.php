@@ -26,7 +26,7 @@ require 'includes/common.php';
 
 </head>
 
-<body>
+<body  class="bg-img">
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -41,7 +41,7 @@ require 'includes/common.php';
 
     </div>
   </nav>
-  <div class="bg-img">
+  <div>
     <br>
     <br>
     <br>

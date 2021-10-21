@@ -8,7 +8,7 @@ require 'includes/common.php';
 
 <html>
     <head>
-        <title>Dashboard</title>
+        <title>Hospitals</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -41,11 +41,9 @@ require 'includes/common.php';
           <center><h2>Dashboard</h2></center>
           <br>
       
-          <a class="btn btn-primary" href="pt_records.php" role="button">Patient Records</a>
+          <a class="btn btn-primary" href="view_all_hosp.php" role="button">View all hospital records</a>
           <br><br>
-          <a class="btn btn-primary" href="hospitals.php" role="button">Hospitals</a>
-          <br><br>
-          <a class="btn btn-primary" href="Vaccines.php" role="button">Vaccines</a>
+          <a class="btn btn-primary" href="search_hosp.php" role="button">Search for a hospital</a>
         </form>
       </div>
     </body>

@@ -43,6 +43,23 @@ body, html {
     border:1px solid #000;
     background-color: white;
   }
+  
+  .container_form{
+    width:800px; 
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-right:auto; 
+    margin-left:auto;
+    border:1px solid #000;
+    background-color: white;
+  }
+  
+  .btn_style{
+      width: 400px; 
+      margin-right:auto; 
+      margin-left:auto;
+  }
+  
   .contain-form {
     width: 700px; 
     padding-top: 40px;

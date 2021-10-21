@@ -8,7 +8,7 @@ require 'includes/common.php';
 
 <html>
     <head>
-        <title>Dashboard</title>
+        <title>Hospital Record</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -37,15 +37,13 @@ require 'includes/common.php';
         <br>
         <br>
         <br>
-        <form class="container">
-          <center><h2>Dashboard</h2></center>
-          <br>
+        <form action="search_hosp_script.php" method="POST" class="container">
+          <center><h2>Search</h2></center>
       
-          <a class="btn btn-primary" href="pt_records.php" role="button">Patient Records</a>
-          <br><br>
-          <a class="btn btn-primary" href="hospitals.php" role="button">Hospitals</a>
-          <br><br>
-          <a class="btn btn-primary" href="Vaccines.php" role="button">Vaccines</a>
+          <label for="h_num"><b>Hospital ID</b></label>
+          <input type="text" placeholder="Enter hospital id to search" name="h_num" required>
+          
+          <button class="btn btn-primary">Search</button>
         </form>
       </div>
     </body>
