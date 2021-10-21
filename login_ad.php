@@ -1,3 +1,13 @@
+<?php
+
+require 'includes/common.php';
+
+/*if (isset($_SESSION['email'])) {
+    header('location: home.php'); 
+    
+} */
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -42,7 +52,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
           
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button class="btn btn-primary">Submit</button>
         </form>
       </div>
           

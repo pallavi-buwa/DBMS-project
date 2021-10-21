@@ -33,7 +33,7 @@ if($rows==0)
         $_SESSION['email']=$email;
         $_SESSION['user_id']=$row['pt_id'];
     
-        header('location: admin_dashboard.html');
+        header('location: admin_dashboard.php');
     }
 }
 ?>

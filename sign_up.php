@@ -1,3 +1,13 @@
+<?php
+
+require 'includes/common.php';
+
+/*if (isset($_SESSION['email'])) {
+    header('location: home.php'); 
+    
+} */
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -36,7 +46,7 @@
     <br>
     <br>
     
-    <form action="sign_up_script.php.php" class="container" method = "POST">
+    <form action="sign_up_script.php" class="container" method = "POST">
       <center>
         <h2>Sign Up</h2>
       </center>
