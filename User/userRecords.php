@@ -20,7 +20,7 @@
             <a class="navbar-brand" href="#">User Dashboard</a>
           </div>
           <ul class="nav navbar-nav">
-            <li>a href="./user_dashboard.php">Home</a></li>
+            <li><a href="./user_dashboard.php">Home</a></li>
             <li class="active"><a href="./userRecords.php">User Information</a></li>
             <li><a href="./bookSlot.php">Book A slot</a></li>
             <li><a href="./userFaqs.php">FAQs</a></li>
