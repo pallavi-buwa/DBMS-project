@@ -20,11 +20,11 @@
             <a class="navbar-brand" href="#">User Dashboard</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./user_dashboard.html">Home</a></li>
-            <li><a href="./userRecords.html">User Information</a></li>
-            <li><a href="./bookSlot.html">Book A slot</a></li>
-            <li><a href="./userFaqs.html">FAQs</a></li>
-            <li><a href="./certificate.html">Print Certificate</a></li>
+            <li>a href="./user_dashboard.php">Home</a></li>
+            <li class="active"><a href="./userRecords.php">User Information</a></li>
+            <li><a href="./bookSlot.php">Book A slot</a></li>
+            <li><a href="./userFaqs.php">FAQs</a></li>
+            <li><a href="./certificate.php">Print Certificate</a></li>
           </ul>
         </div>
       </nav>
