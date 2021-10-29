@@ -34,7 +34,7 @@ if($rows==0)
         $_SESSION['email']=$email;
         $_SESSION['user_id']=$row['pt_id'];
     
-        header('location: ./User/user_dashboard.html');
+        header('location: ./User/user_dashboard.php');
     }
 }
 ?>
