@@ -46,7 +46,36 @@
                    <br><br>
                    <span style="font-size:25px"><i>This is to certify that</i></span>
                    <br><br>
-                   <span style="font-size:30px"><b>Archisha Shukla</b></span><br/><br/>
+                   <span style="font-size:30px"><b>
+                       <?php 
+                        require 'includes/common.php';
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "vaccine_records";
+
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        // Check connection
+                        if ($conn->connect_error) {
+                          die("Connection failed: " . $conn->connect_error);
+                        }
+
+                        $sql = "SELECT name FROM patient where id ='".$_SESSION['email']."'";
+                        $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                  // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<span style=font-size = 25px>". $row["name"]."</span>";
+                  }
+                }
+                  
+                 else {
+                  echo "0 results";
+                }
+            $conn->close();?>
+                       </b></span><br/><br/>
                    <span style="font-size:25px"><i>has taken both doses of the vaccine</i></span> <br/><br/>
                    <span style="font-size:30px">Covishield</span> <br/><br/>
                    <span style="font-size:25px"><i>dated</i></span><br><br><br></b></span>
