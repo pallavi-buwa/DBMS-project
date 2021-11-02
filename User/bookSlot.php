@@ -44,9 +44,9 @@
             <form class="navbar-search">
                 <center>
                     <ul class="nav navbar-nav">
-                       <form action="" method="post">
+                       <form action=""  method="POST">
                         <input type="text" name="search">
-                        <input type="submit" name="submit" value="Search">
+                        <input type="submit" name="submit">
                         </form>
 
                       </ul>
@@ -69,19 +69,17 @@
             </thead>
             <tbody>
             <?php
-                         $search_value=filter_input(INPUT_POST,'search');
-                         print($search_value);
-                         echo $search_value;
                          $servern = "localhost";
                          $usern = "root";
                          $passw = "";
                          $dbn = "vaccine_records";
-                         $conn=new mysqli($servern,$usern,$passw,$dbn);
-                        if($conn->connect_error){
+                         $con=new mysqli($servern,$usern,$passw,$dbn);
+                         $search_value=$_GET['search'];
+                        if($con->connect_error){
                             echo 'Connection Faild: '.$con->connect_error;
                             }else{
-                                $sql = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id where hospital.h_name like '%$search_value%'or hospital.address like '%$search_value%' or vaccines.type like '%$search_value%';";
-                                $res= $conn->query($sql) or die($conn->error);
+                                $sql = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id where hospital.h_name like '%$search_value%' or hospital.pin like '%$search_value%' or hospital.address like '%$search_value%' or hospital_vacc.time_slots like '%$search_value%' or hospital_vacc.capacity like '%$search_value%' or vaccines.type like '%$search_value%';";
+                                $res= $con->query($sql) or die($con->error);
                                 while($row = $res->fetch_assoc()) {
                                 echo "<tr>";
                                 echo "<td>" . $row['h_id'] . "</td>";
@@ -96,7 +94,7 @@
                   }
 
                                 }
-                                $conn->close();
+                                $con->close();
                                 ?>
             </tbody>
           </table>
