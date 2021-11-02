@@ -53,10 +53,9 @@
                             <button id ="dropdown"class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                              <li><a href="#">Capacity</a></li>
-                              <li><a href="#">Hospital Name</a></li>
-                              <li><a href="#">Pincode</a></li>
-                              <li><a href="#">Availablility</a></li>
+                              <li><a href="#" id="cap_id">Capacity</a></li>
+                              <li><a href="#" id="hosp_id">Hospital Name</a></li>
+                              <li><a href="#" id="pin_id">Pincode</a></li>
                             </ul>
                           </div>
                       </li>
@@ -69,74 +68,43 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Serial No.</th>
+                <th scope="col">ID</th>
                 <th scope="col">Hospital</th>
                 <th scope="col">Pincode</th>
+                <th scope="col">Address</th>
+                <th scope="col">Time Slots</th>
                 <th scope="col">Capacity</th>
-                <th scope="col">Status</th>
                 <th scope="col">Vaccine Available</th>
-                
-                
-
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jupitar Hospital</td>
-                <td>411045</td>
-                <td>35</td>
-                <td>Available</td>
-                <td>Covishield</td>
-              </tr>
+             <?php
+              $servername = "localhost";
+              $username = "root";
+              $password = "";
+              $dbname = "vaccine_records";
+
+               $con = new mysqli($servername, $username, $password, $dbname);
+                if (!$con){
+                  die('Could not connect: ' . mysql_error());
+                 }
+                
+                $query ="SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id;";
+                $result = $con->query($query);
+                while($row = $result->fetch_assoc()) {
+                  echo "<tr>";
+                  echo "<td>" . $row['h_id'] . "</td>";
+                  echo "<td>" . $row['h_name'] . "</td>";
+                  echo "<td>" . $row['pin'] . "</td>";
+                  echo "<td>" . $row['address'] . "</td>";
+                  echo "<td>" . $row['time_slots'] . "</td>";
+                  echo "<td>" . $row['capacity'] . "</td>";
+                  echo "<td>" . $row['type'] . "</td>";
+                  echo "</tr>";
+
+                  }
+
+                $con->close();?>
             </tbody>
           </table>
           <br>
