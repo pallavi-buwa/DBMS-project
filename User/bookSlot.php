@@ -44,7 +44,7 @@
             <form class="navbar-search">
                 <center>
                     <ul class="nav navbar-nav">
-                       <form action=""  method="POST">
+                       <form action="search.php"  method="POST">
                         <input type="text" name="search">
                         <input type="submit" name="submit">
                         </form>
@@ -74,7 +74,7 @@
                          $passw = "";
                          $dbn = "vaccine_records";
                          $con=new mysqli($servern,$usern,$passw,$dbn);
-                         $search_value=$_GET['search'];
+                         $search_value=filter_input(INPUT_GET, 'search');
                         if($con->connect_error){
                             echo 'Connection Faild: '.$con->connect_error;
                             }else{
