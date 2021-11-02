@@ -61,25 +61,40 @@
                           die("Connection failed: " . $conn->connect_error);
                         }
 
-                        $sql = "SELECT name FROM patient where id ='".$_SESSION['email']."'";
+                        $sql = "SELECT name FROM patient where email ='".$_SESSION['email']."'";
                         $result = $conn->query($sql);
 
-                if ($result->num_rows > 0) {
                   // output data of each row
-                while($row = $result->fetch_assoc()) {
+                    $row = $result->fetch_assoc();
                     echo "<span style=font-size = 25px>". $row["name"]."</span>";
-                  }
-                }
-                  
-                 else {
-                  echo "0 results";
-                }
+           
             $conn->close();?>
                        </b></span><br/><br/>
                    <span style="font-size:25px"><i>has taken both doses of the vaccine</i></span> <br/><br/>
-                   <span style="font-size:30px">Covishield</span> <br/><br/>
-                   <span style="font-size:25px"><i>dated</i></span><br><br><br></b></span>
-                   <span style="font-size:30px"><b>19th October 2021
+                   <span style="font-size:30px">
+                        <?php 
+                        require 'includes/common.php';
+                        $servern = "localhost";
+                        $usern = "root";
+                        $passw = "";
+                        $dbn = "vaccine_records";
+
+                        // Create connection
+                        $con = new mysqli($servern, $usern, $passw, $dbn);
+                        // Check connection
+                        if ($con->connect_error) {
+                          die("Connection failed: " . $con->connect_error);
+                        }
+
+                        $sql = "select vaccines.type from patient,vaccines where patient.vacc_id=vaccines.vac_id and patient.email='".$_SESSION['email']."';";
+                        $res = $con->query($sql);
+
+                  // output data of each row
+                    $rowa = $res->fetch_assoc();
+                    echo "<span style=font-size = 25px>". $rowa["type"]."</span>";
+           
+            $con->close();?>
+                   </span> 
             </div>
             </div>
         
