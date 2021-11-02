@@ -40,41 +40,63 @@
       <br>
       <center>
       <div class="contain-form">
-        <form>
+          <form action="" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputPassword4">Email</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Email Id">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email Id">
                   </div>
               <div class="form-group col-md-6">
-                <label for="inputPassword4">Name</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Name">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Name">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <label>Address</label>
+              <input type="text" class="form-control" name="addr" placeholder="Enter Address">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" class="form-control" name="city">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputZip">Dose 1 Status</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" class="form-control" name="dose1">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputZip">Dose 2 Status</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" class="form-control" name="dose2" >
               </div>
             </div>
-            <button type="submit" class="edit">Edit Information</button>
+            <input  type="submit" name="submit">Edit Information</input>
           </form>
+          <?php
+                require 'includes/common.php';
+                $servern = "localhost";
+                $usern = "root";
+                $passw = "";
+                $dbn = "vaccine_records";
+                $con=new mysqli($servern,$usern,$passw,$dbn);
+                $name1=filter_input(INPUT_GET, 'name');
+                $addr=filter_input(INPUT_GET, 'addr');
+                $dose1=filter_input(INPUT_GET, 'dose1');
+                $dose2=filter_input(INPUT_GET, 'dose2');
+                $email=filter_input(INPUT_GET, 'email');
+                $city=filter_input(INPUT_GET, 'city');
+                if($con->connect_error){
+                        echo 'Connection Faild: '.$con->connect_error;
+                   }
+                else{
+                    
+                    $query = "UPDATE patient,login set patient.name='$name1', patient.address = '$addr', login.email='$email' WHERE login.email ='".$_SESSION['email']."'and patient.id= login.pt_id;";
+                    $result = mysqli_query($con, $query)or die($con->error);
+                    if($result){
+                        echo "<script type='text/javascript'>alert('Updated successfully');</script>";
+                    }
+                }
+                $con->close();
+          ?>
           <br>
           <br>
       </div>
