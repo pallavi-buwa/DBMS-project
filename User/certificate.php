@@ -61,7 +61,7 @@
                           die("Connection failed: " . $conn->connect_error);
                         }
 
-                        $sql = "SELECT name FROM patient where email ='".$_SESSION['email']."'";
+                        $sql = "SELECT name FROM patient where id ='".$_SESSION['user_id']."'";
                         $result = $conn->query($sql);
 
                   // output data of each row
@@ -86,7 +86,7 @@
                           die("Connection failed: " . $con->connect_error);
                         }
 
-                        $sql = "select vaccines.type from patient,vaccines where patient.vacc_id=vaccines.vac_id and patient.email='".$_SESSION['email']."';";
+                        $sql = "select vaccines.type from patient,vaccines where patient.vacc_id=vaccines.vac_id and patient.id='".$_SESSION['user_id']."';";
                         $res = $con->query($sql);
 
                   // output data of each row
