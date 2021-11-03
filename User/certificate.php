@@ -15,7 +15,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
 <center>
@@ -41,7 +41,13 @@
           </nav>
         </div>
         <div class="print" style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
+            
             <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
+                <div>
+                    <center>
+                <image src="./certificate.jpg"  width="150" height="150">
+                    </center>
+                </div>
                    <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
                    <br><br>
                    <span style="font-size:25px"><i>This is to certify that</i></span>
@@ -95,6 +101,7 @@
            
             $con->close();?>
                    </span> 
+                   
             </div>
             </div>
         

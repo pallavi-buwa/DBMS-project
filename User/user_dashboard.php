@@ -10,7 +10,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
@@ -66,6 +66,65 @@
          </div>
        </div>
     </div>
+        
+         <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="timeline-wrapper">
+        <div class="middle-line"></div>
+        <div class="box box-top">
+            <div class="date">
+                <p>16</p>
+                <p>Oct</p>
+            </div>
+            <div class="box-content">
+                <p>51% population with first dose and 21% fully vaccinated</p>
+            </div>
+        </div>
+        <div class="box box-bottom">
+            <div class="date">
+                <p>10</p>
+                <p>Sept</p>
+            </div>
+            <div class="box-content">
+                <p>40% population with first dose and 12.4% fully vaccinated</p>
+            </div>
+        </div>
+        <div class="box box-top">
+            <div class="date">
+                <p>01</p>
+                <p>MAY</p>
+            </div>
+            <div class="box-content">
+                <p>India officially expanded eligibility to all adults over the age of 18.</p>
+            </div>
+        </div>
+
+        <div class="box box-bottom">
+            <div class="date">
+                <p>16</p>
+                <p>JAN</p>
+            </div>
+            <div class="box-content">
+                <p>India began its vaccination programme, with the initial focus on healthcare workers.</p>
+            </div>
+        </div>
+        <div class="box box-top">
+            <div class="date">
+                <p>8</p>
+                <p>JAN</p>
+            </div>
+            <div class="box-content">
+                <p>India conducts second nationwide dry run in all states and UTs.</p>
+            </div>
+    </section>
+    
+    <br>
+    <br>
+    <br>
+
     
     </body>
      

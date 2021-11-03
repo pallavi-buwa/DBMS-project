@@ -10,7 +10,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
@@ -20,10 +20,10 @@
             <a class="navbar-brand" href="#">User Dashboard</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./user_dashboard.php">Home</a></li>
+            <li><a href="./user_dashboard.php">Home</a></li>
             <li><a href="./userRecords.php">User Information</a></li>
             <li><a href="./bookSlot.php">Book A slot</a></li>
-            <li><a href="./userFaqs.php">FAQs</a></li>
+            <li class="active"><a href="./userFaqs.php">FAQs</a></li>
             <li><a href="./certificate.php">Print Certificate</a></li>
           </ul>
         </div>
