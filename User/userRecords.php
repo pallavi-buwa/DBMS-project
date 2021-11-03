@@ -41,19 +41,20 @@
       <center>
       <div class="contain-form">
           <form action="update.php" method="POST">
+              
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Email</label>
-                    <input type="text" class="form-control" name="email" placeholder="Email Id">
+                    <input type="text" class="form-control" name="email">
                   </div>
               <div class="form-group col-md-6">
                 <label>Name</label>
-                <input type="text" class="form-control" name="name1" placeholder="Name">
+                <input type="text" class="form-control" name="name1" >
               </div>
             </div>
             <div class="form-group">
               <label>Address</label>
-              <input type="text" class="form-control" name="addr" placeholder="Enter Address">
+              <input type="text" class="form-control" name="addr">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
