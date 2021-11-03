@@ -21,11 +21,16 @@
                     $result = mysqli_query($con, $query)or die($con->error);
                     
                     if($result ===true){
-                        echo "<script type='text/javascript'>alert('Updated Successfully');</script>";
-                        header('location:userRecords.php');
+                        echo ("<script LANGUAGE='JavaScript'>
+                        window.alert('Succesfully Updated');
+                        window.location.href='userRecords.php';
+                        </script>");
                     }
                     else{
-                        echo "<script type='text/javascript'>alert('There was some error');</script>";
+                        echo ("<script LANGUAGE='JavaScript'>
+                        window.alert('Error occured please try again');
+                        window.location.href='userRecords.php';
+                        </script>");
                     }
                 }
                 $con->close();
