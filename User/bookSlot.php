@@ -44,7 +44,7 @@
             <form class="navbar-search">
                 <center>
                     <ul class="nav navbar-nav">
-                       <form action="search.php"  method="POST">
+                       <form action=""  method="POST">
                         <input type="text" name="search">
                         <input type="submit" name="submit">
                         </form>
