@@ -3,19 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/User/bookSlot.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/login_ad.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/login_ad_script.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/User/user_dashboard.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/DDL.sql</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/login_script.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/test.sql</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/vaccine_records.sql</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/User/certificate.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/index.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/login.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/User/userRecords.php</file>
-            <file>file:/C:/xampp/htdocs/DBMS_PROJECT/User/userFaqs.php</file>
+            <file>file:/C:/wamp64/www/DBMS_Project/sign_up_script.php</file>
+            <file>file:/C:/wamp64/www/DBMS_Project/index.php</file>
+            <file>file:/C:/wamp64/www/DBMS_Project/User/update.php</file>
+            <file>file:/C:/wamp64/www/DBMS_Project/User/userRecords.php</file>
         </group>
     </open-files>
 </project-private>

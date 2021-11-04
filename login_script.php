@@ -10,16 +10,12 @@ $sq="SELECT pt_id,password,email FROM Login WHERE password='$password'";
 $sq_result=mysqli_query($con,$sq) or die(mysqli_error($con));
 $rows= mysqli_num_rows($sq_result);
 
-echo 'im here';
-
-
 if($rows==0)
 {
     header('location: login.php');
 }
  else
 {
-    echo 'right place';
     $row= mysqli_fetch_array($sq_result);
     if(($email != $row['email']) && ($password==$row['password']))
     {
