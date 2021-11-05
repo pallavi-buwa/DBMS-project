@@ -65,14 +65,14 @@ require 'includes/common.php';
                         <tbody>
                             <tr> 
                                 <th>ID</th>
-                                <th>Pin</th>
+                                <th>Name</th>
                                 <th>Address</th>           
                             </tr>
 
                             <?php 
                              while ($row = mysqli_fetch_array($selectq_result))
                             {
-                                 echo "<tr> <td>".$row['h_id']."</td> <td>".$row['pin']."</td> <td>".$row['address']."</td> </tr>";
+                                 echo "<tr> <td>".$row['h_id']."</td> <td>".$row['h_name']."</td> <td>".$row['address']."</td> </tr>";
                             }
                             ?>                      
                         </tbody>

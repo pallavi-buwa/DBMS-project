@@ -60,7 +60,6 @@
               <tr>
                   <th scope="col"><a href="?sort=id">ID<i class="fa fa-sort" style="font-size:15px"></i></a></th>
                   <th scope="col"><a href="?sort=hospital">Hospital<i class="fa fa-sort" style="font-size:15px"></i></a></th>
-                  <th scope="col"><a href="?sort=pincode">Pincode<i class="fa fa-sort" style="font-size:15px"></i></a></th>
                   <th scope="col"><a href="?sort=address">Address<i class="fa fa-sort" style="font-size:15px"></i></a></th>
                   <th scope="col"><a href="?sort=time">Time Slots<i class="fa fa-sort" style="font-size:15px"></i></a></th>
                   <th scope="col"><a href="?sort=capacity">Capacity<i class="fa fa-sort" style="font-size:15px"></i></a></th>
@@ -72,19 +71,18 @@
                $servern = "localhost";
                $usern = "root";
                $passw = "";
-               $dbn = "vaccine_records";
+               $dbn = "vaccinations";
                $con=new mysqli($servern,$usern,$passw,$dbn);
                $search_value=filter_input(INPUT_GET, 'search');
                         
             if (filter_input(INPUT_GET, 'sort') == 'id')
             {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.h_id";
+                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.h_id";
                 $res = $con->query($sql1);
                 while($row = $res->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['h_id'] . "</td>";
                 echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['time_slots'] . "</td>";
                 echo "<td>" . $row['capacity'] . "</td>";
@@ -95,30 +93,12 @@
             }
             elseif (filter_input(INPUT_GET, 'sort') == 'address')
             {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.address";
+                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.address";
                 $res = $con->query($sql1);
                 while($row = $res->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['h_id'] . "</td>";
                 echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
-                echo "<td>" . $row['address'] . "</td>";
-                echo "<td>" . $row['time_slots'] . "</td>";
-                echo "<td>" . $row['capacity'] . "</td>";
-                echo "<td>" . $row['type'] . "</td>";
-                echo "</tr>";
-            }
-            
-            }
-            elseif (filter_input(INPUT_GET, 'sort') == 'pincode')
-            {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.pin";
-                $res = $con->query($sql1);
-                while($row = $res->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $row['h_id'] . "</td>";
-                echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['time_slots'] . "</td>";
                 echo "<td>" . $row['capacity'] . "</td>";
@@ -129,13 +109,12 @@
             }
             elseif (filter_input(INPUT_GET, 'sort') == 'hospital')
             {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.h_name";
+                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital.h_name";
                 $res = $con->query($sql1);
                 while($row = $res->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['h_id'] . "</td>";
                 echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['time_slots'] . "</td>";
                 echo "<td>" . $row['capacity'] . "</td>";
@@ -146,13 +125,12 @@
             }
             elseif (filter_input(INPUT_GET, 'sort') == 'time')
             {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital_vacc.time_slots";
+                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital_vacc.time_slots";
                 $res = $con->query($sql1);
                 while($row = $res->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['h_id'] . "</td>";
                 echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['time_slots'] . "</td>";
                 echo "<td>" . $row['capacity'] . "</td>";
@@ -163,13 +141,12 @@
             }
              elseif (filter_input(INPUT_GET, 'sort') == 'capacity')
             {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital_vacc.capacity";
+                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY hospital_vacc.capacity";
                 $res = $con->query($sql1);
                 while($row = $res->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['h_id'] . "</td>";
                 echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['time_slots'] . "</td>";
                 echo "<td>" . $row['capacity'] . "</td>";
@@ -180,13 +157,12 @@
             }
             elseif (filter_input(INPUT_GET, 'sort') == 'av')
             {
-                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY vaccines.type";
+                $sql1 = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id ORDER BY vaccines.type";
                 $res = $con->query($sql1);
                 while($row = $res->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['h_id'] . "</td>";
                 echo "<td>" . $row['h_name'] . "</td>";
-                echo "<td>" . $row['pin'] . "</td>";
                 echo "<td>" . $row['address'] . "</td>";
                 echo "<td>" . $row['time_slots'] . "</td>";
                 echo "<td>" . $row['capacity'] . "</td>";
@@ -196,13 +172,12 @@
             
             }
             else{
-              $sql = "SELECT hospital.h_id,hospital.h_name,hospital.pin,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id where hospital.h_name like '%$search_value%' or hospital.pin like '%$search_value%' or hospital.address like '%$search_value%' or hospital_vacc.time_slots like '%$search_value%' or hospital_vacc.capacity like '%$search_value%' or vaccines.type like '%$search_value%';";
+              $sql = "SELECT hospital.h_id,hospital.h_name,hospital.address,hospital_vacc.time_slots,hospital_vacc.capacity,vaccines.type FROM hospital JOIN hospital_vacc ON hospital.h_id=hospital_vacc.h_id JOIN vaccines ON vaccines.vac_id=hospital_vacc.vac_id where hospital.h_name like '%$search_value%' or hospital.address like '%$search_value%' or hospital_vacc.time_slots like '%$search_value%' or hospital_vacc.capacity like '%$search_value%' or vaccines.type like '%$search_value%';";
               $res= $con->query($sql) or die($con->error);
               while($row = $res->fetch_assoc()) {
               echo "<tr>";
               echo "<td>" . $row['h_id'] . "</td>";
               echo "<td>" . $row['h_name'] . "</td>";
-              echo "<td>" . $row['pin'] . "</td>";
               echo "<td>" . $row['address'] . "</td>";
               echo "<td>" . $row['time_slots'] . "</td>";
               echo "<td>" . $row['capacity'] . "</td>";

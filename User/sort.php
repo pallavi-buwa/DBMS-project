@@ -3,7 +3,7 @@
         $servern = "localhost";
         $usern = "root";
         $passw = "";
-        $dbn = "vaccine_records";
+        $dbn = "vaccinations";
         $con=new mysqli($servern,$usern,$passw,$dbn);
         $search_value=filter_input(INPUT_GET, 'search');
         if($con->connect_error){

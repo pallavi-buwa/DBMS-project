@@ -34,7 +34,7 @@ require 'includes/common.php';
         <br>
         <br>
         <br>
-        <center><h2>Patient Records</h2></center>
+        <center><h2>Hospital Records</h2></center>
         
         <?php
      
@@ -64,14 +64,14 @@ require 'includes/common.php';
                         <tbody>
                             <tr> 
                                 <th>ID</th>
-                                <th>Pin Code</th>
+                                <th>Name</th>
                                 <th>Address</th>           
                             </tr>
 
                             <?php 
                              while ($row = mysqli_fetch_array($selectq_result))
                             {
-                                 echo "<tr> <td>".$row['h_id']."</td> <td>".$row['pin']."</td> <td>".$row['address']."</td></tr>";
+                                 echo "<tr> <td>".$row['h_id']."</td> <td>".$row['h_name']."</td> <td>".$row['address']."</td></tr>";
                             }
                             ?>                      
                         </tbody>

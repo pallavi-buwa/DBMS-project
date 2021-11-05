@@ -119,7 +119,7 @@ require 'includes/common.php';
                     <input type="text" class="form-control" name="date1" placeholder=" <?= $row2[3]?>" readonly="true">
                   </div>
                 <?php }
-                else if($f1 == 1) { ?>
+                else if($f1 == 1) { $_SESSION['first'] = 'set'; ?>
                     <div class="form-group">
                     <label>First Dose Vaccine</label>
                     <input type="text" class="form-control" name="dose1" required="true">
@@ -147,7 +147,21 @@ require 'includes/common.php';
                     <input type="text" class="form-control" name="date2" placeholder=" <?= $row3[3]?>" readonly="true">
                   </div>
                 <?php } 
-                else if($f2 == 1){ ?>
+                else if($f2 == 1 and isset ($_SESSION['first'])){ ?>
+                    <div class="form-group">
+                    <label>Second Dose Vaccine</label>
+                    <input type="text" class="form-control" name="dose2">
+                  </div>
+                    <div class="form-group col-md-6">
+                    <label>Hospital ID</label>
+                    <input type="text" class="form-control" name="id2">
+                  </div>
+                    <div class="form-group col-md-6">
+                    <label>Date</label>
+                    <input type="text" class="form-control" name="date2">
+                  </div>
+                <?php } 
+                else if($f2 == 1 and !(isset ($_SESSION['first']))){ ?>
                     <div class="form-group">
                     <label>Second Dose Vaccine</label>
                     <input type="text" class="form-control" name="dose2" required="true">

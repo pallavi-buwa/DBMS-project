@@ -58,7 +58,7 @@
                         $servername = "localhost";
                         $username = "root";
                         $password = "";
-                        $dbname = "vaccine_records";
+                        $dbname = "vaccinations";
 
                         // Create connection
                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -83,7 +83,7 @@
                         $servern = "localhost";
                         $usern = "root";
                         $passw = "";
-                        $dbn = "vaccine_records";
+                        $dbn = "vaccinations";
 
                         // Create connection
                         $con = new mysqli($servern, $usern, $passw, $dbn);
