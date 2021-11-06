@@ -62,6 +62,7 @@ require 'includes/common.php';
                 <center>
                 
                     <table class="table table-striped">
+                        
                         <tbody>
                             <tr> 
                                 <th>ID</th>

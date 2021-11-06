@@ -92,11 +92,11 @@
                           die("Connection failed: " . $con->connect_error);
                         }
 
-                        $sql = "select vaccines.type from patient,vaccines where patient.vacc_id=vaccines.vac_id and patient.id='".$_SESSION['user_id']."';";
+                        $sql = "select vaccination_status1.type from patient,vaccination_status1 where patient.vacc_id=vaccination_status1.vacc_id and patient.id='".$_SESSION['user_id']."';";
                         $res = $con->query($sql);
 
                   // output data of each row
-                    $rowa = $res->fetch_assoc();
+                    $rowa = $res->fetch_assoc() or die($conn->error);
                     echo "<span style=font-size = 25px>". $rowa["type"]."</span>";
            
             $con->close();?>

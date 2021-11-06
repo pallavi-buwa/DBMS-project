@@ -18,6 +18,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
+    
   }
   .bg-img-user {
     /* The image used */
@@ -155,3 +157,4 @@ i{
     display:none;
   }
 }
+

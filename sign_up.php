@@ -46,7 +46,7 @@ require 'includes/common.php';
     <br>
     <br>
     
-    <form action="sign_up_script.php" class="container" method = "POST">
+    <form action="sign_up_script.php" class="container" method = "POST" style="overflow-y:scroll; height:500px;">
       <center>
         <h2>Sign Up</h2>
       </center>
@@ -77,6 +77,8 @@ require 'includes/common.php';
       <input type="password" placeholder="Enter Password" name="psw" required>
 
       <button type="submit" class="btn">Submit</button>
+      <br>
+      <br>
     </form>
   </div>
 

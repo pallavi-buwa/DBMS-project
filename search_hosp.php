@@ -38,6 +38,7 @@ require 'includes/common.php';
         <br>
         <br>
         <form action="search_hosp_script.php" method="POST" class="container">
+            <a href="admin_dashboard.php" style="color: #000" ><b>&#8592</b> BACK</a>
           <center><h2>Search</h2></center>
       
           <label for="h_num"><b>Hospital ID</b></label>

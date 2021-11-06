@@ -38,12 +38,15 @@ require 'includes/common.php';
         <br>
         <br>
         <form class="container">
+             <a href="admin_dashboard.php" style="color: #000" ><b>&#8592</b> BACK</a>
           <center><h2>Dashboard</h2></center>
           <br>
       
           <a class="btn btn-primary" href="view_all.php" role="button">View all patient records</a>
           <br><br>
           <a class="btn btn-primary" href="search_pt.php" role="button">Search for a patient record</a>
+          <br><br>
+     
         </form>
       </div>
     </body>

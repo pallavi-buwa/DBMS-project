@@ -57,7 +57,8 @@ require 'includes/common.php';
    
         <br>
         <div class="container_form">
-            <div class="table-responsive">
+       
+            <div class="table-responsive" style="overflow-y:scroll; height:200px;">
                 <center>
                 
                     <table class="table table-striped">
@@ -78,11 +79,12 @@ require 'includes/common.php';
            
                 </center>
             </div> 
-        </div> 
-        <br>
-        <div class="btn_style">
+            <div class="btn_style">
             <a class="btn btn-dark" href="admin_dashboard.php" role="button">Back</a>
         </div>
+        
+        </div> 
+        <br>
         
         <?php 
         }

@@ -20,7 +20,7 @@
                     if($dose1 != "" and $id1 != "" and $date1 != "" and $dose2 != "" and $id2 != "" and $date2 != ""){
                         if(strcasecmp($dose1, $dose2) != 0){
                             echo ("<script LANGUAGE='JavaScript'>
-                            window.alert('Invalid information 1 please try again');
+                            window.alert('Invalid information please try again');
                             window.location.href='userRecords.php';
                             </script>");
                         }
@@ -31,7 +31,7 @@
                         echo 'Connection Failed: '.$con->connect_error;
                 }
                 if($dose1 != "" and $id1 != "" and $date1 != "" and $dose2 != "" and $id2 != "" and $date2 != ""){
-                    if($date1 < $date2){
+                    if(strcasecmp($date1, $date2)>0){
                         echo ("<script LANGUAGE='JavaScript'>
                             window.alert('Invalid information 2 please try again');
                             window.location.href='userRecords.php';
@@ -61,8 +61,9 @@
                             </script>");
                         }
                         $query = "INSERT INTO vaccination_status1(type, h_id,date_taken) values ('$dose1', '$id1', '$date1')";
-                        //$query = "UPDATE patient SET name = '$name1', address = '$addr',aadhaar = $aad,mobile = '$num' WHERE id = '".$_SESSION['user_id']."' ;"; 
+                        $query2 = "UPDATE patient vacc_id = '$id1' where id = '".$_SESSION['user_id']."' ;"; 
                         $result = mysqli_query($con, $query)or die($con->error);
+                        
 
                         if($result ===true){
                             /*echo ("<script LANGUAGE='JavaScript'>

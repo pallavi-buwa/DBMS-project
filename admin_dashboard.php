@@ -38,15 +38,23 @@ require 'includes/common.php';
         <br>
         <br>
         <form class="container">
+          <a href="index.php" style="color: #000" ><b>&#8592</b> BACK</a>
           <center><h2>Dashboard</h2></center>
-          <br>
+          <BR>
       
           <a class="btn btn-primary" href="pt_records.php" role="button">Patient Records</a>
           <br><br>
           <a class="btn btn-primary" href="hospitals.php" role="button">Hospitals</a>
           <br><br>
           <a class="btn btn-primary" href="Vaccines.php" role="button">Vaccines</a>
+          <br>
+          <br>
+          
+          
         </form>
+        
+        
       </div>
+        
     </body>
 </html>

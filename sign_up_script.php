@@ -54,7 +54,7 @@ if($search_result){
     $_SESSION['user_id']=$roww['id'];
     $_SESSION['email']=$email;
     
-    header('location:./User/user_dashboard.html');
+    header('location:login.php');
 }
 
 
@@ -71,7 +71,7 @@ if($search_result){
      $_SESSION['user_id']=$last_id;
      $_SESSION['email']=$email;
      
-     header('location:./User/user_dashboard.html');        
+     header('location:login.php');        
              
  }
     
