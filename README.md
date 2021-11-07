@@ -17,7 +17,7 @@ git clone https://github.com/pallavi-buwa/DBMS-project
 
 The following diagram describes the program flow:
 
-
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/ss.png)
 
 
 ## User Side
