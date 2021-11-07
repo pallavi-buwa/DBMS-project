@@ -22,10 +22,93 @@ The following diagram describes the program flow:
 
 ## User Side
 
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(723).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(724).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(725).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(727).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(728).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(729).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(730).png)
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(731).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(732).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(733).png)
+
+
 
 
 
 ## Admin Side
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(734).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(735).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(736).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(737).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(738).png)
+
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(739).png)
+
+
+
+![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/Screenshot%20(740).png)
+
+
 
 
 
