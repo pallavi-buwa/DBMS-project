@@ -15,7 +15,7 @@ git clone https://github.com/pallavi-buwa/DBMS-project
 
 ## Functional requirements.
 
-The following diagram describes the program flow:
+The following image describes the program flow:
 
 ![alt](https://github.com/pallavi-buwa/DBMS-project/blob/main/ss.png)
 
